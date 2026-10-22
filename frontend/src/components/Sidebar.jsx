@@ -37,7 +37,7 @@ function Sidebar() {
                 <br />
 
                 <NavLink
-                    to="/projects"
+                    to="/tasks"
                     style={({ isActive }) => ({
                         color: isActive ? "#2563eb" : "#000",
                         fontWeight: isActive ? "bold" : "normal",
@@ -50,7 +50,7 @@ function Sidebar() {
                 <br />
 
                 <NavLink
-                    to="/projects"
+                    to="/settings"
                     style={({ isActive }) => ({
                         color: isActive ? "#2563eb" : "#000",
                         fontWeight: isActive ? "bold" : "normal",
