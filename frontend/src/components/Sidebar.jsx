@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Sidebar() {
     return (
@@ -10,27 +10,55 @@ function Sidebar() {
             }}
         >
             <ul style={{ listStyle: "none" }}>
-                <li>
-                    <Link to="/dashboard">Dashboard</Link>
-                </li>
+                <NavLink
+                    to="/dashboard"
+                    style={({ isActive }) => ({
+                        color: isActive ? "#2563eb" : "#000",
+                        fontWeight: isActive ? "bold" : "normal",
+                        textDecoration: "none",
+                    })}
+                >
+                    Dashboard
+                </NavLink>
 
                 <br />
 
-                <li>
-                    <Link to="/projects">Projects</Link>
-                </li>
+                <NavLink
+                    to="/projects"
+                    style={({ isActive }) => ({
+                        color: isActive ? "#2563eb" : "#000",
+                        fontWeight: isActive ? "bold" : "normal",
+                        textDecoration: "none",
+                    })}
+                >
+                    Projects
+                </NavLink>
 
                 <br />
 
-                <li>
-                    <Link to="/tasks">Tasks</Link>
-                </li>
+                <NavLink
+                    to="/projects"
+                    style={({ isActive }) => ({
+                        color: isActive ? "#2563eb" : "#000",
+                        fontWeight: isActive ? "bold" : "normal",
+                        textDecoration: "none",
+                    })}
+                >
+                    Tasks
+                </NavLink>
 
                 <br />
 
-                <li>
-                    <Link to="/settings">Settings</Link>
-                </li>
+                <NavLink
+                    to="/projects"
+                    style={({ isActive }) => ({
+                        color: isActive ? "#2563eb" : "#000",
+                        fontWeight: isActive ? "bold" : "normal",
+                        textDecoration: "none",
+                    })}
+                >
+                    Settings
+                </NavLink>
             </ul>
         </aside>
     );
