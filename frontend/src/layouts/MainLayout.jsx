@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
-
+import { Outlet } from "react-router-dom";
 function MainLayout() {
     return (
         <>
@@ -20,7 +20,7 @@ function MainLayout() {
                         padding: "20px",
                     }}
                 >
-                    Main Content Area
+                    <Outlet />
                 </main>
             </div>
         </>
