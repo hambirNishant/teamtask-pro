@@ -21,6 +21,7 @@ function DashboardPage() {
 
             <Button
                 text="Secondary Button"
+                onClick={handleClick}
                 variant="secondary"
             />
 
@@ -29,6 +30,7 @@ function DashboardPage() {
 
             <Button
                 text="Delete"
+                onClick={handleClick}
                 variant="danger"
             />
         </>
