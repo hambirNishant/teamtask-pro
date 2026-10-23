@@ -20,6 +20,13 @@ function ProjectsPage() {
 
         setProjectName("");
     };
+    const deleteProject = (projectId) => {
+        const updatedProjects = projects.filter(
+            (project) => project.id !== projectId
+        );
+
+        setProjects(updatedProjects);
+    };
 
     return (
         <div>
@@ -49,6 +56,7 @@ function ProjectsPage() {
                 <ProjectCard
                     key={project.id}
                     project={project}
+                    onDelete={deleteProject}
                 />
             ))}
         </div>

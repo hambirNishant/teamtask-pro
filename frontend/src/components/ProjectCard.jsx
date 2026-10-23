@@ -1,4 +1,6 @@
-function ProjectCard({ project }) {
+import Button from "./Button";
+
+function ProjectCard({ project, onDelete }) {
     return (
         <div
             style={{
@@ -14,6 +16,12 @@ function ProjectCard({ project }) {
             <p>
                 Status: {project.status}
             </p>
+
+            <Button
+                text="Delete"
+                variant="danger"
+                onClick={() => onDelete(project.id)}
+            />
         </div>
     );
 }
