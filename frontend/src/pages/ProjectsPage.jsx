@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import ProjectCard from "../components/ProjectCard";
 import Input from "../components/Input";
 import Button from "../components/Button";
 
@@ -14,8 +14,8 @@ function ProjectsPage() {
         const newProject = {
             id: Date.now(),
             name: projectName,
+            status: "Active",
         };
-
         setProjects([...projects, newProject]);
 
         setProjectName("");
@@ -46,16 +46,10 @@ function ProjectsPage() {
             <h2>Project List</h2>
 
             {projects.map((project) => (
-                <div
+                <ProjectCard
                     key={project.id}
-                    style={{
-                        padding: "10px",
-                        border: "1px solid #ddd",
-                        marginBottom: "10px",
-                    }}
-                >
-                    {project.name}
-                </div>
+                    project={project}
+                />
             ))}
         </div>
     );
